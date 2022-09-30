@@ -1,0 +1,20 @@
+.Items-card{
+    width: 600px;
+    min-height: 500px;
+    background-color: #d0d0d5;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 26px;
+}
+
+.container-boton-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.boton-productos{
+    width: 25%;
+}

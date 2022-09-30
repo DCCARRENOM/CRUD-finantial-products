@@ -1,0 +1,7 @@
+.Texto{
+    color: white !important; 
+}
+
+.Texto:hover{
+    color: gray !important;
+}

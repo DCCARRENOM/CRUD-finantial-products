@@ -1,0 +1,35 @@
+.Texto{
+    color: white !important; 
+}
+
+.Texto:hover{
+    color: gray !important;
+}
+
+.formulario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
+
+.login-input{
+    margin: auto;
+}
+
+.login-boton{
+    border-radius: 10%;
+}
+
+.input {
+    margin: 2%;
+}
+
+.label{
+    margin-left: 3%;
+    color: black;
+}
+
+.register-boton{
+    background-color: green;
+}

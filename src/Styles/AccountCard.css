@@ -1,0 +1,25 @@
+.Account-card{
+    width: 600px;
+    min-height: 400px;
+    background-color: #d0d0d5;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 26px;
+}
+
+.Boton-crear-cuenta{
+    display: none;
+}
+
+.Ocultar-boton{
+    background-color: aqua;
+    width: 25%;
+}
+
+.container-boton-cuenta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
