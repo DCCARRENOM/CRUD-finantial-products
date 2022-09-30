@@ -34,7 +34,7 @@ function NavigationBar (props) {
   const sendNewUser = async (user) =>{
     try{
       user.id = parseInt(user.id)
-      const response = await fetch('http://localhost:8081/person/save', {
+      const response = await fetch('https://crud-financial-products.herokuapp.com/person/save', {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {
@@ -53,7 +53,7 @@ function NavigationBar (props) {
 
   const sendLogin = async (User) =>{
     /*User.id = parseInt(User.id)*/
-    const response = await fetch(`http://localhost:8081/person/login?id=${User.id}&password=${User.password}`)
+    const response = await fetch(`https://crud-financial-products.herokuapp.com/person/login?id=${User.id}&password=${User.password}`)
     const data = await response.json()
 
     if(data){

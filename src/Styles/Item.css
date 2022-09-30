@@ -32,3 +32,7 @@
     overflow-wrap: anywhere; /* si el texto es muy largo se corta y sigue debajo*/
     color: white;
   }
+
+  .item >p{
+    margin: 2%;
+  }
