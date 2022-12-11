@@ -31,7 +31,7 @@ function AccountCard({ idUsuario }) {
 
   const consultarPersona = async () => {
     const response = await fetch(
-      `https://crud-financial-products.herokuapp.com/person/findById/${idUsuario.id}`
+      `http://localhost:8081/person/findById/${idUsuario.id}`
     );
     const data = await response.json();
 
@@ -41,7 +41,7 @@ function AccountCard({ idUsuario }) {
   const consultarCuenta = async () => {
     try {
       const response = await fetch(
-        `https://crud-financial-products.herokuapp.com/account/findByOwnerId/${idUsuario.id}`
+        `http://localhost:8081/account/findByOwnerId/${idUsuario.id}`
       );
       const data = await response.json();
 
@@ -72,7 +72,7 @@ function AccountCard({ idUsuario }) {
 
   const sendAccount = async (cuenta) => {
     const response = await fetch(
-      "https://crud-financial-products.herokuapp.com/account/save",
+      "http://localhost:8081/account/save",
       {
         method: "POST",
         body: JSON.stringify(cuenta),
@@ -81,7 +81,7 @@ function AccountCard({ idUsuario }) {
         },
       }
     );
-    alert("Cuenta creada");
+   // alert("Cuenta creada");
   };
 
   return (

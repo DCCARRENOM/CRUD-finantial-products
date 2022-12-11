@@ -58,7 +58,7 @@ function ItemsCard({ idUsuario }) {
 
   const consultarCuenta = async () => {
     const response = await fetch(
-      `https://crud-financial-products.herokuapp.com/account/findByOwnerId/${idUsuario.id}`
+      `http://localhost:8081/account/findByOwnerId/${idUsuario.id}`
     );
     const data = await response.json();
 
@@ -68,7 +68,7 @@ function ItemsCard({ idUsuario }) {
 
   const consultarTarjetas = async (datos) => {
     const response = await fetch(
-      `https://crud-financial-products.herokuapp.com/card/findByAccountIdentification/${datos.id}`
+      `http://localhost:8081/card/findByAccountIdentification/${datos.id}`
     );
     const data = await response.json();
 
@@ -97,8 +97,8 @@ function ItemsCard({ idUsuario }) {
   };
 
   const createCard = () => {
-    let minNum = 1000000000000000;
-    let maxNum = 9999999999999999;
+    let minNum = 100000;
+    let maxNum = 999999;
     let minId = 100;
     let maxId = 999;
     let minCvc = 100;
@@ -115,7 +115,7 @@ function ItemsCard({ idUsuario }) {
 
   const sendNewCard = async (Tarjeta) => {
     const response = await fetch(
-      "https://crud-financial-products.herokuapp.com/card/save",
+      "http://localhost:8081/card/save",
       {
         method: "POST",
         body: JSON.stringify(Tarjeta),
@@ -145,7 +145,7 @@ function ItemsCard({ idUsuario }) {
       card_id: data.id,
     };
     const response = await fetch(
-      "https://crud-financial-products.herokuapp.com/credit/save",
+      "http://localhost:8081/credit/save",
       {
         method: "POST",
         body: JSON.stringify(TarjetaCredito),
@@ -165,7 +165,7 @@ function ItemsCard({ idUsuario }) {
       card_id: data.id,
     };
     const response = await fetch(
-      "https://crud-financial-products.herokuapp.com/debit/save",
+      "http://localhost:8081/debit/save",
       {
         method: "POST",
         body: JSON.stringify(TarjetaDebito),
